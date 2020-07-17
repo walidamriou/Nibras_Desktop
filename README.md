@@ -1,7 +1,7 @@
 # Nibras
 Guide and dictionary made for first year students of Algerian universities with technical majors 
 
-## Website of FridgeOS Project
+## Website 
 https://Nibras.walidamriou.com
 
 ### Copyright CC 2020 Walid Amriou
