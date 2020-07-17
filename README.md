@@ -1,5 +1,5 @@
 # Nibras
-A guide for students of the first year at The Algerian technical universities 
+Guide and dictionary made for first year students of Algerian universities with technical majors 
 
 ## Website of FridgeOS Project
 https://Nibras.walidamriou.com
