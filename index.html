@@ -19,17 +19,7 @@
   <script src="material_design/material.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/main.js"></script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43599500-10"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-43599500-10');
-</script>
-
+  <script src="js/data.js"></script>
 	
   <script>
     // stop entry key
@@ -43,7 +33,6 @@
 
     // call data.json
 
-    var data;
 function readJsonFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -56,13 +45,7 @@ function readJsonFile(file, callback) {
     rawFile.send(null);
 }
 
-readJsonFile("https://manara.walidamriou.com/js/data.json", function(text){
-    data = JSON.parse(text);
-    console.log(data);
-    //alert(data[0].data);
-    //var elem = document.getElementById("datadisplay");
-    //elem.innerHTML = data.data['id']; //we want to read: "id": "123664" 
-});
+
   </script>
 
   <style>
