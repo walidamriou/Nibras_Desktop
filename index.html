@@ -116,17 +116,22 @@ tr:nth-child(even) {
 .mdl-textfield__label:after{
   background-color: #f25ca2;
 }
+
+
+#view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
   </style>
 </head>
 
-<body style="color: #212121;">
-  
   <div class="devfast-display-container devfast-animate-opacity devfast-text-white">
-    <div class="devfast-display-topleft devfast-padding-large devfast-xlarge" style="margin: 10px">
-    </div>
 
-    <div class="devfast-display-topright devfast-padding-large devfast-xlarge" style="margin: 10px">
-    </div>
 
     <br>
     <center>
@@ -136,18 +141,9 @@ tr:nth-child(even) {
           <img src="img/logo.png" style="width: 50px;">
           <b>نبراس</b></h4>
 
-        <h5>
-          دليل موجه إلى طلبة السنة الأولى للشعب التقنية بالجامعة 
-          <br>
-          </span></h5>
-
-<br>
-<br>
 
 <div class="container">
-  <center>
-    <p>للبحث أكتب الكلمة المراد ترجمتها سواءا من العربية إلى الفرنسية أو العكس </p>
-  </center>
+
   <form role="form" autocomplete="off">
     <div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" type="input" id="txt-search" class="form-control input-lg" style="background-color:#dddddd;width: 300px;height: 40px;">
@@ -201,128 +197,7 @@ $('#txt-search').keyup(function(){
 });
 </script>
 
+<a href="about.html" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">About</a>
 
         <br>
-
-<!-- project -->
-<div>
-  <br>
-  <br>
-
-  <h5 style="margin:50px;line-height: initial;">    
-  <b>عن هذا المشروع</b><br> 
-  نبراس، هو دليل موجه إلى طلبة السنة الأولى للشعب التقنية بالجامعات الجزائرية، يحتوي على أهم المصطلحات والمفردات إلى يصادفها في البرنامج الدراسي خلال هذه السنة وما بعدها. يحوي هذا المعجم على أزيد من 2160 مصطلح.
-  <br> 
-  </h5>
-
-  <h5 style="margin:50px;line-height: initial;">    
-    <b>هل تريد نسخة لتثبيتها على حهازك</b><br> 
-    أعمل على إعادة تطوير نسخة الكمبيوتر لكي تدعم كل أنظمة التشغيل الأساسية وينداوز، لينكس وماك أو أس 
-    <br>
-    ولكن يمكنك تنزيل النسخ القديمة الأصلية لهذا المشروع من هنا
-    nibras.sourceforge.net
-    <br> 
-    </h5>
-
-    <h5 style="margin:50px;line-height: initial;">    
-      <b> مزايا نبراس </b><br> 
-      </h5>
-      <br>
-
-      <center>
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">
-            <h4>مفتوح المصدر</h4>
-            <br>
-            <img src="img/1.png" style="max-width: 50%;">
-            <br>
-            <br>
-            <p style="padding-left: 10px;padding-right: 10px;"></p>
-            يطور هذا المشروع كمشروع مفتوح المصدر ولكن برخصة المشاع الإبداعي الغير تجاري 4.0
-          </p>
-            <br>
-            <br>
-      
-          </div>
-          <div class="mdl-cell mdl-cell--4-col">
-            <h4>البحث باللغة العربية أو اللغة الفرنسية</h4>
-            <br>
-            <img src="img/2.png" style="max-width: 50%;">
-            <br>
-            <br>
-            <p style="padding-left: 10px;padding-right: 10px;"></p>
-            يمكنك البحث في مكان واحد باللغتين العربية أو الفرنسية، يمكنك إضافة الإنجليزية لاحقا
-          </p>
-      
-            <br>
-            <br>
-          </div>
-          <div class="mdl-cell mdl-cell--4-col">
-            <h4>سريع ومتعدد المنصات</h4>
-      
-            <br>
-            <br>
-          
-            <img src="img/3.png" style="max-width: 50%;">
-            <br>
-            <p style="padding-left: 10px;padding-right: 10px;"></p>
-            تطبيق نبراس سيدعم لينكس، وينداوز وماك أو أس وسيتم تطوير تطبيق جديد للأندرويد والإي يو أس
-          </p>
-      
-            <br>
-            <br>
-          </div>
-        </div>
-      </center>
-      
-
-  <br>
-  <img src="img/anim.png" style="max-width: 50%;">   
-</div>
-<!-- end project -->
-
-<!-- developer -->
-<div style="background-color: #f2f2f2;">
-
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
-      <center>
-      <img src="img/developer.jpg" style="max-width: 40%;">        
-      </center>
-  </div>
-
-    <div class="mdl-cell mdl-cell--8-col" style="color: #212121;">
-      <h5><b>يتم تطوير هذا المشروع من قبل <b>عمريو وليد</b></h5>
-      <h6>
-        مهندس أنظمة مدمجة ومطور برمجيات، حاصل على شهادة ماستر في الأنظمة المدمجة وشهادة ليسونس في الإلكترونيات
-      <br>
-      تم الحصول على تصريح تطوير هذا العمل من قبل المالك الأصلي لفكرة المشروع، الدكتور طه زروقي
-      </h6>
-      <br>
-      <a href="https://www.walidamriou.com/" target="_blank">Website</a> <b>.</b>
-      <a href="https://www.linkedin.com/in/walidamriou/" target="_blank">Linkedin</a> <b>.</b>
-      <a href="https://github.com/walidamriou" target="_blank">GitHub</a> <b>.</b>
-      <a href="https://twitter.com/walidamriou" target="_blank">Twitter</a> <b>.</b>
-      <a href="https://facebook.com/walidamriou" target="_blank">Facebook</a>
-    </div>
-    <br>
-
-
-  </div>
-
-</div>
-<!-- end developer -->
-
-
-<footer class="mdl-mega-footer">
-<div class="mdl-mega-footer__bottom-section">
-<div class="mdl-logo">مشروع نبراس</div>
-يطور مشروع نبراس من قبل عمريو وليد تحت رخصة المشاع الإبداعي الغير تجاري 4.0 دولي  2020
-
-<br>
-<br>
-شعار نبراس وإسمه ملك لأصحابه الأصليين
-</div>
-
-</footer>
 </body>
