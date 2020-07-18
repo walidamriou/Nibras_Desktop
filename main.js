@@ -1,6 +1,6 @@
 var ua = require('universal-analytics');
 
-var visitor = ua('UA-43599500-8');
+var visitor = ua('UA-43599500-11');
 
 
 // Modules to control application life and create native browser window
@@ -47,8 +47,8 @@ mainWindow.webContents.on("new-window", function(event, url) {
   //url===url bacause I want to make a standard function for all url 
   if(url===url){
     const mainWindow2 = new BrowserWindow({
-    width: 600,
-    height: 400,
+    width: 650,
+    height: 500,
     resizable: false,
     icon: image,
     webPreferences: {
