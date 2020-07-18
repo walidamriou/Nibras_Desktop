@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
-  
+
 <head>
   <title>نبراس</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="نبراس، هو دليل موجه إلى طلبة السنة الأولى للشعب التقنية بالجامعة">
+  <meta name="description" content="نبراس، هو دليل موجه إلى طلبة السنة الأولى للشعب التقنية بالجامعة">
   <meta name="author" content="WalidAmriou">
 
 
@@ -20,36 +19,42 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/data.js"></script>
-	
+
   <script>
     // stop entry key
-    $(document).ready(function() {
-        $("form").bind("keypress", function(e) {
-            if (e.keyCode == 13) {
-                return false;
-            }
-        });
+    $(document).ready(function () {
+      $("form").bind("keypress", function (e) {
+        if (e.keyCode == 13) {
+          return false;
+        }
+      });
     });
 
     // call data.json
 
-function readJsonFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
+    function readJsonFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
+          callback(rawFile.responseText);
         }
+      }
+      rawFile.send(null);
     }
-    rawFile.send(null);
-}
-
-
   </script>
 
   <style>
-    body,h1,h2,h3,h4,h5,h6,p,a {
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
       font-family: 'Cairo', sans-serif;
     }
 
@@ -58,13 +63,14 @@ function readJsonFile(file, callback) {
       color: #212121;
       background-color: #FAFAFA
     }
-    @media (min-width:600px){
+
+    @media (min-width:600px) {
       .mdl-list {
         padding-left: 30%;
       }
     }
 
-    @media (max-width:700px){
+    @media (max-width:700px) {
       .mdl-list {
         padding-left: 10%;
       }
@@ -86,43 +92,49 @@ function readJsonFile(file, callback) {
     #your_new_password_text {
       color: red;
     }
-    .mdl-ceckbox{
+
+    .mdl-ceckbox {
       width: 10%;
     }
-    .mdl-list__item{
-      min-height:65px;
+
+    .mdl-list__item {
+      min-height: 65px;
     }
 
     table {
       font-family: 'Cairo', sans-serif;
       font-size: larger;
       border-collapse: collapse;
-      }
-      
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: center;
-        padding: 8px;
-        width: 200px;
-        }
+    }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+      width: 200px;
+    }
 
-.mdl-mega-footer--bottom-section, .mdl-mega-footer__bottom-section{
-  text-align: right;
-}
-.mdl-textfield__label{
-  color: #242424;
-}
-.mdl-textfield__label:after{
-  color: #242424;
-  background-color: #F2AF3B;
-}
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    .mdl-mega-footer--bottom-section,
+    .mdl-mega-footer__bottom-section {
+      text-align: right;
+    }
+
+    .mdl-textfield__label {
+      color: #242424;
+    }
+
+    .mdl-textfield__label:after {
+      color: #242424;
+      background-color: #F2AF3B;
+    }
 
 
-#about {
+    #about {
       font-family: 'Cairo', sans-serif;
       position: fixed;
       display: block;
@@ -131,81 +143,83 @@ tr:nth-child(even) {
       margin-right: 40px;
       margin-bottom: 40px;
       z-index: 900;
-      border-radius:13px;
-      background-color:#212121;
+      border-radius: 13px;
+      background-color: #212121;
     }
-    
   </style>
 </head>
 
-  <div class="devfast-display-container devfast-animate-opacity devfast-text-white">
+<div class="devfast-display-container devfast-animate-opacity devfast-text-white">
 
-
-    <br>
-    <center>
-      <div class="devfast-display-middle">
-        
-        <h4 stylecolor="#212121">
-          <img src="img/logo.png" style="width: 50px;">
-          <b>نبراس</b></h4>
-
-
-<div class="container">
-
-  <form role="form" autocomplete="off">
-    <div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="input" id="txt-search" class="form-control input-lg" style="background-color:#dddddd;width: 300px;height: 40px;text-align: center;">
-      <label class="mdl-textfield__label" for="txt-search" style="text-align: right;">&nbsp;البحث ... </label>
-    </div>
-  </form>
-
-	<div id="filter-records"></div>
-  </div>
 
   <br>
+  <center>
+    <div class="devfast-display-middle">
 
-<script>
-  // to table
-$('#txt-search').keyup(function(){
-  var searchField = $(this).val();
-	if(searchField === '')  {
-    $('#filter-records').html('');
-    return;
-  }
-  var regex = new RegExp(searchField, "i");
-  var output = '<div class="row">';
-  var count = 1;
-  output +="<br>"
-  output +="<br>"
-  output +="<div>"
-  output +="<center>"
-  output +="<table>"
-  output +="<tr>"
-    output +="<td>"+"العربية"+"</td>"
-    output +="<td>"+"French"+"</td>"
-		output += '</tr>'
-  $.each(data, function(key, val){
+      <h4 stylecolor="#212121">
+        <img src="img/logo.png" style="width: 50px;">
+        <b>نبراس</b></h4>
 
-    if ((val.ARABIC.search(regex) != -1) || (val.FRENCH.search(regex) != -1)) {
-      output +="<tr>"
-      output +="<td>"+val.ARABIC+"</td>"
-      output +="<td>"+val.FRENCH+"</td>"
-			output += '</tr>';
 
-			if(count%2 == 0){
-        output += '</div><div class="row">'
-      }
-      count++;
-    }
-  });
-  output += '</table>';
-      output +="</center>"
-  output += '</div>';
-  $('#filter-records').html(output);
-});
-</script>
+      <div class="container">
 
-<a href="about.html" target="_blank" id="about" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-color-text--accent-contrast">عن التطبيق</a>
+        <form role="form" autocomplete="off">
+          <div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="input" id="txt-search" class="form-control input-lg"
+              style="background-color:#dddddd;width: 300px;height: 40px;text-align: center;">
+            <label class="mdl-textfield__label" for="txt-search" style="text-align: right;">&nbsp;البحث ... </label>
+          </div>
+        </form>
 
-        <br>
-</body>
+        <div id="filter-records"></div>
+      </div>
+
+      <br>
+
+      <script>
+        // to table
+        $('#txt-search').keyup(function () {
+          var searchField = $(this).val();
+          if (searchField === '') {
+            $('#filter-records').html('');
+            return;
+          }
+          var regex = new RegExp(searchField, "i");
+          var output = '<div class="row">';
+          var count = 1;
+          output += "<br>"
+          output += "<br>"
+          output += "<div>"
+          output += "<center>"
+          output += "<table>"
+          output += "<tr>"
+          output += "<td>" + "العربية" + "</td>"
+          output += "<td>" + "French" + "</td>"
+          output += '</tr>'
+          $.each(data, function (key, val) {
+
+            if ((val.ARABIC.search(regex) != -1) || (val.FRENCH.search(regex) != -1)) {
+              output += "<tr>"
+              output += "<td>" + val.ARABIC + "</td>"
+              output += "<td>" + val.FRENCH + "</td>"
+              output += '</tr>';
+
+              if (count % 2 == 0) {
+                output += '</div><div class="row">'
+              }
+              count++;
+            }
+          });
+          output += '</table>';
+          output += "</center>"
+          output += '</div>';
+          $('#filter-records').html(output);
+        });
+      </script>
+
+      <a href="about.html" target="_blank" id="about"
+        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-color-text--accent-contrast">عن
+        التطبيق</a>
+
+      <br>
+      </body>
