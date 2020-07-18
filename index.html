@@ -113,14 +113,19 @@ tr:nth-child(even) {
 .mdl-mega-footer--bottom-section, .mdl-mega-footer__bottom-section{
   text-align: right;
 }
+.mdl-textfield__label{
+  color: #242424;
+}
 .mdl-textfield__label:after{
-  background-color: #f25ca2;
+  color: #242424;
+  background-color: #F2AF3B;
 }
 
 
 #view-source {
+  font-family: 'Cairo', sans-serif;
       position: fixed;
-      display: block;
+            display: block;
       right: 0;
       bottom: 0;
       margin-right: 40px;
@@ -146,8 +151,8 @@ tr:nth-child(even) {
 
   <form role="form" autocomplete="off">
     <div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="input" id="txt-search" class="form-control input-lg" style="background-color:#dddddd;width: 300px;height: 40px;">
-      <label class="mdl-textfield__label" for="txt-search">&nbsp;البحث ... </label>
+      <input class="mdl-textfield__input" type="input" id="txt-search" class="form-control input-lg" style="background-color:#dddddd;width: 300px;height: 40px;text-align: center;">
+      <label class="mdl-textfield__label" for="txt-search" style="text-align: right;">&nbsp;البحث ... </label>
     </div>
   </form>
 
@@ -197,7 +202,7 @@ $('#txt-search').keyup(function(){
 });
 </script>
 
-<a href="about.html" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">About</a>
+<a href="about.html" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">عن التطبيق</a>
 
         <br>
 </body>
