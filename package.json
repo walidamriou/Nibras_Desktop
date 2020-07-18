@@ -5,31 +5,25 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux snap",
-    "dist_win32":"electron-builder --win --ia32 ",
-    "dist_win64":"electron-builder --win --x64 ",
-    "dist_mac":"electron-builder --mac"
- 
+    "dist_linux": "electron-builder --linux snap",
+    "dist_win32": "electron-builder --win --ia32 ",
+    "dist_win64": "electron-builder --win --x64 ",
+    "dist_mac": "electron-builder --mac"
   },
   "repository": "https://github.com/walidamriou/nibras_desktop",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
   "author": "Walid Amriou",
-  "license": "AGPL-3.0",
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License",
   "build": {
-      "icon": "./img/logo.png"
+    "icon": "./img/logo.png"
   },
- 
   "devDependencies": {
     "electron": "^8.2.5",
     "electron-builder": "^22.7.0",
     "electron-installer-debian": "^3.0.0",
-    "electron-packager": "^14.2.1"
+    "electron-packager": "^15.0.0"
   },
   "dependencies": {
     "electron-json-storage": "^4.1.8",

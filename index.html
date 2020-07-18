@@ -21,6 +21,16 @@
   <script src="js/data.js"></script>
 
   <script>
+    //update functions 
+    let current_version = 100;
+    readJsonFile("https://nibras.walidamriou.com/version.json", function(text){
+    var data = JSON.parse(text);
+    console.log("version");
+    console.log(data.current_version);
+    if(current_version != data.current_version){
+      alert("You are using old version \n Update your app from \n nibras.walidamriou.com");
+    }});
+
     // stop entry key
     $(document).ready(function () {
       $("form").bind("keypress", function (e) {
@@ -159,7 +169,8 @@
       <h4 stylecolor="#212121">
         <img src="img/logo.png" style="width: 50px;">
         <b>نبراس</b></h4>
-
+        <h6> <b>طور من قبل</b> عمريو وليد <br>
+        www.walidamriou.com</h6>
 
       <div class="container">
 
