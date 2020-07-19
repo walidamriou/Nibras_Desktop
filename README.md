@@ -4,6 +4,51 @@ Guide and dictionary made for first year students of Algerian universities with 
 ## Website 
 https://Nibras.walidamriou.com
 
+## To develop 
+
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+
+```bash
+# Clone this repository
+git clone https://github.com/walidamriou/Nibras_Desktop 
+# Go into the repository
+cd Nibras_Desktop
+# Install dependencies
+npm install 
+# Run the app
+npm start
+```  
+### Make .snap for Ubuntu/Linux  
+We use electron-builder to builds a Snap for an already customized Electron app.
+For more details on Snap-specific arguments, see the snapcraft syntax page:
+https://snapcraft.io/docs/build-snaps/syntax
+
+```bash
+# to make a .snap for Linux distributions 
+npm run dist
+```
+
+You will found the .snap in dist folder.
+I have used:
+```bash
+snapcraft upload --release=stable nibras_1.0.0_amd64.snap 
+```
+to upload it to the snapcraft
+
+### Make macOS setup .dmg from macOS  
+```bash
+# make dmg file, you will found it in /dist folder 
+npm run dist_mac
+```  
+### Make Windows setup .exe from Ubuntu/Linux
+```bash
+# Make .exe setup for windows 32 bit
+npm run dist_win32
+#Or Make .exe setup for windows 64 bit
+npm run dist_win64
+```  
+
 ### Copyright CC 2020 Walid Amriou
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
